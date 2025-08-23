@@ -10,6 +10,29 @@
 // car 형태라면 "[    ] 문이있는 자동차."를 반환해야 하고,
 // truck 형태라면 "적재 화물 용량이 [     ]인 트럭."를 반환해야 합니다.
 
+interface Car {
+  kind: "car";
+  numberOfDoors: number;
+}
+
+interface Truck {
+  kind: "truck";
+  payloadCapacity: number;
+}
+
+type Vehicle = Car | Truck;
+
+function describeVehicle(vehicle: Vehicle) {
+  switch (vehicle.kind) {
+    case "car":
+      return `${vehicle.numberOfDoors}문이있는 자동차.`;
+    case "truck":
+      return `적재 화물 용량이 ${vehicle.payloadCapacity}인 트럭.`;
+    default:
+      const _exhaustiveCheck: never = vehicle;
+      return _exhaustiveCheck;
+  }
+}
 
 // 테스트 케이스
 // const car: Vehicle = { kind: 'car', numberOfDoors: 4 }
