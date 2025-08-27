@@ -1,5 +1,5 @@
 // ES 모듈 내보내기 구문
-export function myFunction() {
+export default function myFunction() {
   // ...
 }
 
