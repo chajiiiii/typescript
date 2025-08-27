@@ -3,16 +3,21 @@
 // --------------------------------------------------------------------------
 
 // 질문 1
-// "myLibrary"라는 라이브러리에 greet(string): string 함수가 
+// "myLibrary"라는 라이브러리에 greet(string): string 함수가
 // 있다고 가정하고 앰비언트 타입을 선언하세요.
-
+declare const myLibrary: {
+  greet: (input: string) => string;
+};
 
 // 질문 2
-// 전역 변수 "API_URL"이 string 타입이라고 
+// 전역 변수 "API_URL"이 string 타입이라고
 // 가정하고 앰비언트 타입을 선언하세요.
-
+declare const API_URL: string;
 
 // 질문 3
-// "Animal"이라는 앰비언트 클래스를 선언하세요. 
+// "Animal"이라는 앰비언트 클래스를 선언하세요.
 // 생성자는 name(string)을 받고, speak(): string 메서드를 가집니다.
-
+declare class Animal {
+  constructor(name: string);
+  speak(): string;
+}
