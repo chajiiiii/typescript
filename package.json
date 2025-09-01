@@ -22,5 +22,8 @@
     "type-testing": "^0.2.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.37.0"
+  },
+  "dependencies": {
+    "@types/pluralize": "^0.0.33"
   }
 }
